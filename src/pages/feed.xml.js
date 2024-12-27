@@ -8,6 +8,7 @@ export async function GET(context) {
     description: 'Personal, programming, and essays from Chaleb',
     stylesheet: false,
     site: context.site,
+    trailingSlash: false,
     items: blog.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
