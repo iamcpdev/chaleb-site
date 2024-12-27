@@ -1,4 +1,14 @@
-User-agent: *
-Disallow:
+import type { APIRoute } from 'astro';
+
+const getRobotsTxt = (sitemapURL: URL) => `
 Host: https://iamcpdev.me/
-Sitemap: https://iamcpdev.me/sitemap-index.xml
+User-agent: *
+Allow: /
+
+Sitemap: ${sitemapURL.href}
+`;
+
+export const GET: APIRoute = ({ site }) => {
+  const sitemapURL = new URL('sitemap-index.xml', site);
+  return new Response(getRobotsTxt(sitemapURL));
+};
