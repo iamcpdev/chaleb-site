@@ -2,6 +2,10 @@
 
 My personal website/blog, built with [Astro](https://astro.build/). Theme was created by Eilan's Brutal theme and remixed by me.
 
+## Description
+
+Welcome to the repository for Chaleb's Corner on the Web. This project is my personal website and blog, where I share my thoughts, projects, and more. The site is built using Astro, a modern static site generator, and styled with UnoCSS for a utility-first approach.
+
 ### Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -49,5 +53,3 @@ This directory contains all components for the home page.
 ### `components/layout/`
 
 This directory contains all layout components. For instance, the header and footer and `<head>` section.
-
-If you need more from this theme, don't hesitate to open an issue or reach out to me!
