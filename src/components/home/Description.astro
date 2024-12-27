@@ -1,0 +1,86 @@
+---
+import { Card, Pill } from "@eliancodes/brutal-ui";
+import { Image } from "astro:assets";
+
+const doing = [
+	{ name: "Health Tech", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10770800/" },
+	{ name: "ForesTrust", url: "https://www.usendowment.org/what-we-do/traditional-markets/fores-trust-blockchain/" },
+	{ name: "Astro", url: "https://astro.build/" },
+	{ name: "AI + Patient Safety", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7414411/" },
+	{ name: "Mintlify", url: "https://mintlify.com/" },
+	{ name: "User Management", url: "https://clerk.com/" },
+	{ name: "g0v", url: "https://g0v.tw/intl/en/manifesto/en/"}
+];
+
+const articles = [
+  { name: "Teen Hackers", url: "https://wsj.com/articles/teen-hackers-try-to-convince-parents-they-are-up-to-good-11569922200" },
+  { name: "Fire Department Grant", url: "https://lakelander.com/2023/09/28/council-considers-options-for-animal-control-in-city/" },
+]
+
+---
+
+<section class="mt-8 grid md:grid-cols-2 gap-8">
+	<div class="flex flex-col gap-8">
+  <Card>
+		<h2 class="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">
+			News Articles:
+		</h2>
+		<ul class="flex gap-4 flex-wrap">
+			{
+				articles.map((item) => (
+					<li class="sanchez">
+						<Pill>
+							<a href={item.url} target="_blank" title={`Go to ${item.name}`}>
+								{item.name}
+							</a>
+						</Pill>
+					</li>
+				))
+			}
+		</ul>
+	</Card>
+	<Card>
+		<h2 class="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">
+			What's peaking my interest these days?
+		</h2>
+		<ul class="flex gap-4 flex-wrap">
+			{
+				doing.map((item) => (
+					<li class="sanchez">
+						<Pill>
+							<a href={item.url} target="_blank" title={`Go to ${item.name}`}>
+								{item.name}
+							</a>
+						</Pill>
+					</li>
+				))
+			}
+		</ul>
+	</Card>
+	</div>
+	<Card color="orange">
+		<h2 class="text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif">Who am I?</h2>
+		<p class="poppins">
+			Hi, I’m Chaleb, a developer based in Arizona, currently exploring the
+      intersection of technology, security, and healthcare. My journey into
+      the tech world began in 2016 when I started working with cybersecurity
+      architecture and Lean process improvement, building a strong foundation
+      in backend development and system optimization.
+		</p>
+		<p class="poppins mt-2">
+			What began as a focus on creating secure, efficient systems has evolved
+      into a passion for backend engineering and cybersecurity. I specialize
+      in building robust server-side applications, designing scalable databases,
+      and ensuring systems are secure against ever-evolving threats.
+		</p>
+		<p class="poppins mt-2">
+			Over the years, I’ve worked on a range of projects, from consulting for
+      major aerospace companies to optimizing workflows and implementing secure
+      infrastructures. Today, my focus is on leveraging my tech expertise to
+      solve complex problems and drive innovation in backend development and security.
+		</p>
+    <p class="poppins mt-2">
+      Alongside development, I enjoy writing technical documentation and conducting
+      workshops, helping others understand and implement secure coding practices.
+	</Card>
+</section>

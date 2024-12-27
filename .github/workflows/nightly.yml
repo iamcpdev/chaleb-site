@@ -35,7 +35,7 @@ jobs:
         with:
           branch: ci/update-astro
           commit-message: 'ci: update Astro'
-          assignees: eliancodes
+          assignees: iamcpdev
           title: 'ci: update Astro'
           body: Update Astro and packages to latest version
           labels: ci

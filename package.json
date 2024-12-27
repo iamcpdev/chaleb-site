@@ -2,13 +2,12 @@
   "name": "chaleb-site",
   "version": "1.2.0",
   "type": "module",
-  "packageManager": "pnpm@8.6.0",
   "author": {
-    "name": "Elian Van Cutsem",
-    "email": "hello@elian.codes",
-    "url": "https://www.elian.codes/"
+    "name": "Chaleb",
+    "email": "chaleb@iamcpdev.me",
+    "url": "https://www.iamcpdev.me"
   },
-  "homepage": "https://brutal.elian.codes",
+  "homepage": "https://iamcpdev.me",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -39,5 +38,6 @@
     "prettier-plugin-astro": "^0.12.2",
     "sharp": "^0.32.6",
     "unocss": "^0.57.7"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

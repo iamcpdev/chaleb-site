@@ -1,0 +1,35 @@
+---
+import { Button, Card } from "@eliancodes/brutal-ui";
+import { Image } from "astro:assets";
+
+import headshot from "../../assets/chaleb.png";
+---
+
+<section id="about" class="grid md:grid-cols-8 gap-8 mt-4">
+	<h2 class="hidden">About Chaleb</h2>
+	<div class="flex flex-col md:col-span-6">
+		<Card>
+			<div class='flex flex-col justify-between items-start gap-4'>
+            <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
+              Hi, I'm Chaleb
+            </p>
+            <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
+              Army Veteran, Developer, and Blogger
+            </p>
+			<p class="sanchez mt-4 mb-8 text-lg md:text-xl lg:text-3xl">
+				Located in Casa Grande, AZ
+			</p>
+            <Button target={'_self'} href='/blog/'>
+              Check out the blog &rarr;
+            </Button>
+          </div>
+		</Card>
+	</div>
+	<Image
+		class="object-cover h-full w-full rounded-lg md:col-span-2 border-3 border-black card-shadow"
+		src={headshot}
+		alt="Elian Van Cutsem"
+		width={headshot.width}
+		height={headshot.height}
+	/>
+</section>

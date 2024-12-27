@@ -17,7 +17,10 @@ const posts = await getCollection('blog');
 export function getStaticPaths() {
   return posts.map((post) => ({
     params: { slug: post.id },
-    props: { title: post.data.title, description: post.data.description },
+    props: {
+      title: post.data.title,
+      description: post.data.description,
+    },
   }));
 }
 
@@ -30,10 +33,10 @@ export const GET: APIRoute = async ({ params, props }) => {
       <div style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; filter: drop-shadow()">
         <div style="display: flex; justify-content: space-between;">
           <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-            <p style="font-size: 48px;">Brutal theme for Astro</p>
+            <p style="font-size: 48px;">Hi, I'm Chaleb</p>
             <p style="font-size: 38px;">${title}</p>
           </div>
-          <img src="https://www.elian.codes/assets/img/elian.jpg" width="200px" height="200px" style="border: 3px solid black; border-radius: 0.5rem;" />
+          <img src="https://www.iamcpdev.me/assets/chaleb.png" width="200px" height="200px" style="border: 3px solid black; border-radius: 0.5rem;" />
         </div>
         <div style="display: flex;">
           <p style="font-size: 24px;">${description}</p>

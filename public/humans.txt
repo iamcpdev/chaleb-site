@@ -1,6 +1,6 @@
-## Brutal Theme ##
+## Chaleb's Corner on the Web ##
 
-All development & Content by Elian Van Cutsem
+Development and content by Chaleb Pommells. Theme designed by Elian Van Cutsem and remixed by me.
 
-- email: hello@elian.codes
-- website: www.elian.codes
+- email: chaleb@iamcpdev
+- website: www.iamcpdev.me
