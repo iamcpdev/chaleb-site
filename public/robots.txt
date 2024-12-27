@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow:
 Host: https://www.iamcpdev.me/
-Sitemap: https://iamcpdev.me/sitemap.xml
+Sitemap: https://iamcpdev.me/sitemap-index.xml
