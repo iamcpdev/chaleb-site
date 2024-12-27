@@ -5,7 +5,7 @@ author: "Chaleb Pommells"
 tags:
   - About Me
   - Introduction
-imgUrl: '../../assets/chaleb.png'
+imgUrl: '../../assets/chaleb.jpeg'
 description: A personal introduction post marking the beginning of my blog, where I share my journey.
 ---
 
