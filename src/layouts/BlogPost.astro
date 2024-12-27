@@ -18,6 +18,9 @@ const { author, pubDate, headings, description, title } = Astro.props;
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
+  <head>
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
   <main class='p-6 lg:grid lg:grid-cols-3 flex justify-center'>
     <BlogSideBar headings={headings as any[]} />
     <BlogContent {pubDate} {author}>
