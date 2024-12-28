@@ -1,6 +1,7 @@
 name: nightly
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
 
@@ -32,11 +33,13 @@ jobs:
         run: yarn dlx @astrojs/upgrade --yes
 
       - name: PR Changes
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v7
         with:
           branch: ci/update-astro
           commit-message: 'ci: update Astro'
           assignees: iamcpdev
+          sign-commits: true
+          signoff: true
           title: 'ci: update Astro'
           body: Update Astro and packages to latest version
           labels: ci
