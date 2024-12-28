@@ -20,10 +20,10 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
 
       - name: Upgrade Astro
-        run: pnpm dlx @astrojs/upgrade --yes
+        run: yarn dlx @astrojs/upgrade --yes
 
       - name: PR Changes
         uses: peter-evans/create-pull-request@v4
