@@ -1,6 +1,7 @@
 name: nightly
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
 
@@ -34,5 +35,4 @@ jobs:
           title: 'ci: update Astro'
           body: Update Astro and packages to latest version
           labels: ci
-
 ## Fix
