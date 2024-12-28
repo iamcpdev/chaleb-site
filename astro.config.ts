@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import UnoCSS from 'unocss/astro';
 
-import vercel from '@astrojs/vercel';
+import robotsTxt from 'astro-robots-txt';
 
 export default defineConfig({
   // used to generate images
@@ -14,7 +14,11 @@ export default defineConfig({
         : 'https://localhost:3000/',
 
   trailingSlash: 'ignore',
-  integrations: [sitemap(), UnoCSS({ injectReset: true })],
+  integrations: [
+    sitemap(),
+    UnoCSS({ injectReset: true }),
+    robotsTxt(),
+  ],
 
   vite: {
     optimizeDeps: {
