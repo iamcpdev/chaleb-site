@@ -4,10 +4,12 @@ import Layout from '@layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
-  return blogEntries.map((blogpost) => ({
-    params: { slug: blogpost.id },
-    props: { blogpost },
-  }));
+  return blogEntries
+    .filter((blogpost) => import.meta.env.PROD ? blogpost.data.draft !== true : true)
+    .map((blogpost) => ({
+      params: { slug: blogpost.id },
+      props: { blogpost },
+    }));
 }
 
 interface Props {
