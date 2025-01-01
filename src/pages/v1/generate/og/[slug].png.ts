@@ -15,13 +15,18 @@ const width = 1200;
 const posts = await getCollection('blog');
 
 export function getStaticPaths() {
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: {
-      title: post.data.title,
-      description: post.data.description,
-    },
-  }));
+  return posts
+    .filter(
+      (post) =>
+        !(post.data.draft && process.env.NODE_ENV === 'production')
+    )
+    .map((post) => ({
+      params: { slug: post.id },
+      props: {
+        title: post.data.title,
+        description: post.data.description,
+      },
+    }));
 }
 
 export const GET: APIRoute = async ({ params, props }) => {
