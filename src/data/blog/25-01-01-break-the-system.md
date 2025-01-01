@@ -7,6 +7,7 @@ tags:
   - Atlas
 description: "A manifesto for revolutionizing education, empowering students, and building a future-ready generation."
 imgUrl: './images/break-the-system.jpeg'
+draft: true
 ---
 
 # Break the System
