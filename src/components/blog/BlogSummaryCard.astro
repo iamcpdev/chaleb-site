@@ -8,6 +8,11 @@ interface Props {
 }
 
 const { post } = Astro.props;
+
+const isProduction = import.meta.env.PROD;
+if (isProduction && post.data.draft) {
+  return null;
+}
 ---
 
 <SummaryCard
