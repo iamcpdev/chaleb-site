@@ -7,11 +7,13 @@ interface Props {
 }
 
 const { posts } = Astro.props;
+
+const isProduction = import.meta.env.PROD;
 ---
 
 <ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
   {
-    posts.map((post) => {
+    posts.filter(post => !(isProduction && post.data.draft)).map((post) => {
       return (
         <li>
           <BlogSummaryCard post={post} />
