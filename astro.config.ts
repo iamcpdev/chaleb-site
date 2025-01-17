@@ -27,7 +27,8 @@ export default defineConfig({
     server: {
       proxy: {
         '/.well-known/nostr.json': {
-          target: 'https://iamcpdev.me/.well-known/nostr.json',
+          target:
+            'https://nip5.iamcpdev.workers.dev/.well-known/nostr.json',
           changeOrigin: true,
           rewrite: (path) =>
             path.replace(/^\/\.well-known\/nostr\.json$/, '/'),
