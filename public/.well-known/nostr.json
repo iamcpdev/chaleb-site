@@ -1,5 +1,14 @@
 {
     "names": {
         "chaleb": "c12e8d103c8c9615d5c040a81d5a5824993f8d260d20be9766963eea8d0d71e0"
-    }
+    },
+    "relays": {
+    "c12e8d103c8c9615d5c040a81d5a5824993f8d260d20be9766963eea8d0d71e0": [
+      "wss://nos.lol",
+      "wss://relay.damus.io",
+      "wss://relay.snort.social",
+      "wss://relay.nostrplebs.com",
+      "wss://nostr.land"
+    ]
+  }
 }
