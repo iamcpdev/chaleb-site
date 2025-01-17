@@ -24,13 +24,5 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ['@resvg/resvg-js'],
     },
-    server: {
-      fs: {
-        allow: ['public/.well-known/nostr.json'],
-      },
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-      },
-    },
   },
 });
