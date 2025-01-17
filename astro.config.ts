@@ -25,6 +25,9 @@ export default defineConfig({
       exclude: ['@resvg/resvg-js'],
     },
     server: {
+      fs: {
+        allow: ['public/.well-known/nostr.json'],
+      },
       headers: {
         'Access-Control-Allow-Origin': '*',
       },
