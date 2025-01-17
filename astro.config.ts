@@ -24,5 +24,15 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ['@resvg/resvg-js'],
     },
+    server: {
+      proxy: {
+        '/.well-known/nostr.json': {
+          target: 'https://iamcpdev.me/.well-known/nostr.json',
+          changeOrigin: true,
+          rewrite: (path) =>
+            path.replace(/^\/\.well-known\/nostr\.json$/, '/'),
+        },
+      },
+    },
   },
 });
